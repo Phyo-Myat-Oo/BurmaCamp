@@ -55,8 +55,7 @@
             <h4>Upload your images</h4>
 
             <div class="input-group mb-3">
-              <button class="btn btn-success d-flex mx-0" type="button"
-                onclick="document.getElementById('files').click()">
+              <button class="btn btn-dark d-flex mx-0" type="button" id="addMoreimg">
                 Add more images
               </button>
 
@@ -87,3 +86,12 @@
       </form>
     </div>
   </div>
+  
+  <script>
+    const button = document.getElementById('addMoreimg');
+  
+  button.addEventListener('click', function() {
+    // code to run when button is clicked
+    files.click();
+  });
+    </script>
