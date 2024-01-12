@@ -148,7 +148,10 @@ app.get('/home',(req,res)=>{
     res.render('home');
 });
 
-
+app.get('',(req,res)=>{
+    // console.log(req.query);
+    res.render('home');
+});
 app.all("*",(req,res,next)=>{
     next(new ExpressError('page not found',404));
 })
