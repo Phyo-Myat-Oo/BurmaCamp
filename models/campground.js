@@ -1,7 +1,6 @@
 const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 const Review=require('./review.js');
-// https://res.cloudinary.com/dhzmrsso5/image/upload/w_100/v1704531816/BurmaCamp/ifmjouu09kltdrjjv9tu.png
 const ImageSchema=new Schema(
     {
         url:String,
