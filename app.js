@@ -147,8 +147,8 @@ app.use('/',userRoutes);
 app.use('/campgrounds',campgroundRoutes);
 app.use('/campgrounds/:id/reviews',reviewRoutes);// by default id can't be accepted in reviews.js cause of express .we need to allow with mergeParams 
 
-app.get('/home',(req,res)=>{
-    console.log(req.query);
+app.get('/',(req,res)=>{
+    // console.log(req.query);
     res.render('home');
 });
 
