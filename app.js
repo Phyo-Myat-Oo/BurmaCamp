@@ -138,16 +138,12 @@ app.use((req,res,next)=>{
     res.locals.currentUser=req.user;
     next();
 })
-// app.get('/fakeuser',async(req,res)=>{
-//     const user=new User({email:'godfist1234@gmail.com',username:'phyoMyatOo'});// we don't pass in password here we gonna use register() method of passport local mongoose
-//     const newUser=await User.register(user,'123456')// user.register take entire instance of user model and set a password after hashing automatically using Pbkdf2 instead of bcrypt cuz it is platform independent
-//     res.send(newUser);
-// })
+
 app.use('/',userRoutes);
 app.use('/campgrounds',campgroundRoutes);
-app.use('/campgrounds/:id/reviews',reviewRoutes);// by default id can't be accepted in reviews.js cause of express .we need to allow with mergeParams 
+app.use('/campgrounds/:id/reviews',reviewRoutes);
 
-app.get('/',(req,res)=>{
+app.get('/home',(req,res)=>{
     // console.log(req.query);
     res.render('home');
 });
