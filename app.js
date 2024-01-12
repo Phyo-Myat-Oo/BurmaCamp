@@ -143,14 +143,15 @@ app.use('/',userRoutes);
 app.use('/campgrounds',campgroundRoutes);
 app.use('/campgrounds/:id/reviews',reviewRoutes);
 
-app.get('/home',(req,res)=>{
+
+
+app.get('/',(req,res)=>{
     // console.log(req.query);
     res.render('home');
 });
-
 app.get('',(req,res)=>{
-    // console.log(req.query);
-    res.render('home');
+  // console.log(req.query);
+  res.render('home');
 });
 app.all("*",(req,res,next)=>{
     next(new ExpressError('page not found',404));
